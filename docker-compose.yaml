@@ -1,0 +1,71 @@
+version: "3"
+
+services:
+  cotraveler:
+    image: cotraveler:0.1
+    container_name: cotraveler
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - monitoring
+    environment:
+      spring.datasource.username: sasa
+      spring.datasource.password: password
+      spring.datasource.url: jdbc:h2:mem:mainDB
+      spring.datasource.driverClassName: org.h2.Driver
+  prometheus:
+    image: prom/prometheus:v2.40.5
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command: "--config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus"
+    networks:
+      - monitoring
+  loki:
+    image: grafana/loki:2.2.1
+    container_name: loki
+    volumes:
+      - ./config/loki/loki-local-config.yaml:/etc/loki/loki-local-config.yaml
+    command: -config.file=/etc/loki/loki-local-config.yaml
+    ports:
+      - "3100:3100"
+    networks:
+      - monitoring
+#    networks:
+#      monitoring:
+#        aliases:
+#          - loki
+  promtail:
+    image: grafana/promtail:2.2.1
+    container_name: promtail
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers
+      - ./config/promtail/promtail-config.yaml:/etc/promtail/promtail-config.yaml
+    command: -config.file=/etc/promtail/promtail-config.yaml
+    networks:
+      - monitoring
+    depends_on:
+      - loki
+  grafana:
+    image: grafana/grafana:9.3.1
+    container_name: grafana
+    volumes:
+      - ./config/grafana/provisioning:/etc/grafana/provisioning
+    ports:
+      - "3000:3000"
+    networks:
+      - monitoring
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+      - loki
+networks:
+  monitoring:
+

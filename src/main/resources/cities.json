@@ -1,0 +1,129 @@
+{
+  "cities": [
+    {
+      "cityName": "AKTAU",
+      "cityLatitude": "43.650000",
+      "cityLongitude": "51.150000",
+      "cameraZoom": {
+        "zoom": "12",
+        "minZoom": "10",
+        "maxZoom": "20"
+      },
+      "citySWBound": {
+        "latitude": "43.59",
+        "longitude": "51.01"
+      },
+      "cityNEBound": {
+        "latitude": "43.92",
+        "longitude": "51.40"
+      },
+      "cityLabels": [
+        {
+          "labelName": "Гостиница Актау",
+          "labelLatitude": "43.63598531283708",
+          "labelLongitude": "51.168816016413956"
+        },
+        {
+          "labelName": "Гостиница Гранд Нур Плаза",
+          "labelLatitude": "43.66860751945002",
+          "labelLongitude": "51.173338162645976"
+        },
+        {
+          "labelName": "ЦОН",
+          "labelLatitude": "43.66822714631255",
+          "labelLongitude": "51.135117269772955"
+        },
+        {
+          "labelName": "ТЦ AK KALA",
+          "labelLatitude": "43.67341240650044",
+          "labelLongitude": "51.177102827200315"
+        },
+        {
+          "labelName": "Гостиница Арман",
+          "labelLatitude": "43.683933547829945",
+          "labelLongitude": "51.18432756561298"
+        },
+        {
+          "labelName": "станция Мангистау",
+          "labelLatitude": "43.69692211334708",
+          "labelLongitude": "51.30799014690289"
+        },
+        {
+          "labelName": "аэропорт Актау",
+          "labelLatitude": "43.85593569856303",
+          "labelLongitude": "51.087712465820864"
+        },
+        {
+          "labelName": "мечеть Бекет Ата",
+          "labelLatitude": "43.66098468008916",
+          "labelLongitude": "51.15896056465504"
+        },
+        {
+          "labelName": "ТЦ Олжа",
+          "labelLatitude": "43.67690104995137",
+          "labelLongitude": "51.16369351744303"
+        },
+        {
+          "labelName": "Гипермаркет Дина",
+          "labelLatitude": "43.68256308684488",
+          "labelLongitude": "51.15673539480452"
+        },
+        {
+          "labelName": "Aktau Beach",
+          "labelLatitude": "43.62198133153196",
+          "labelLongitude": "51.20696151129074"
+        },
+        {
+          "labelName": "центр ДРУЖБА",
+          "labelLatitude": "43.635078843367594",
+          "labelLongitude": "51.17905725277533"
+        },
+        {
+          "labelName": "Политехнический Колледж",
+          "labelLatitude": "43.63925907923194",
+          "labelLongitude": "51.179729048117636"
+        },
+        {
+          "labelName": "Маяк",
+          "labelLatitude": "43.628666872233836",
+          "labelLongitude": "51.16414832408199"
+        },
+        {
+          "labelName": "ТРК Актау",
+          "labelLatitude": "43.665702215117896",
+          "labelLongitude": "51.15296157133373"
+        },
+        {
+          "labelName": "ТЦ Баскудык",
+          "labelLatitude": "43.68831440588002",
+          "labelLongitude": "51.21082378476747"
+        },
+        {
+          "labelName": "ЖК MAEK-KUAT RESIDENCE",
+          "labelLatitude": "43.668799415933265",
+          "labelLongitude": "51.147488619926094"
+        },
+        {
+          "labelName": "ТЦ Рахат",
+          "labelLatitude": "43.65618554729304",
+          "labelLongitude": "51.214215986710535"
+        },
+        {
+          "labelName": "микрорайон 9",
+          "labelLatitude": "43.6463153735883",
+          "labelLongitude": "51.15397691977134"
+        },
+        {
+          "labelName": "Кораблик",
+          "labelLatitude": "43.659908243795236",
+          "labelLongitude": "51.144930209499776"
+        },
+        {
+          "labelName": "Дачи Химик",
+          "labelLatitude": "43.666018991728",
+          "labelLongitude": "51.192439773162604"
+        }
+      ]
+    }
+  ]
+}
